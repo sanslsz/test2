@@ -1,0 +1,104 @@
+:root {
+  --nv-cta-font-size: 14px;
+  --nv-cta-small-font-size: 12px;
+
+  --cp_cta-icon-size: 1.5em;
+  --cp_cta-fontsize: 15px;
+  --cp_cta-fontsize-s: 13px;
+  --cp_cta-padding-tb: 0.7em;
+  --cp_cta-padding-lr: 0.8em;
+
+  --filter-search-text-margin: var(--sp_px-s);
+  --filter-search-width: 100%;
+  --filter-search-width-2: clamp(240px, 60vw, 400px);
+
+  --scrollbar-width: 15px;
+}
+
+@media screen and (min-width: 640px) {
+  :root {
+    --nv-cta-font-size: 15px;
+    --nv-cta-small-font-size: 13px;
+
+    --filter-search-text-margin: unset;
+    --filter-search-width: clamp(300px, 50vw, 400px);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  :root {
+    --nv-cta-font-size: 16px;
+    --nv-cta-small-font-size: 14px;
+
+    --cp_cta-fontsize: 16px;
+    --cp_cta-fontsize-s: 14px;
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  :root {
+    --nv-cta-font-size: 16px;
+    --nv-cta-small-font-size: 15px;
+
+    --cp_cta-fontsize: 18px;
+    --cp_cta-fontsize-s: 15px;
+  }
+}
+
+/*=================== link and CTA ===================*/
+.cp_link {
+  color: inherit;
+  /*    font-weight: bold;*/
+  text-decoration: underline 2px var(--nv-green);
+  text-underline-position: under;
+
+  &:is(:focus, :hover) {
+    color: inherit;
+  }
+}
+
+.cp_cta_prim {
+  display: block;
+  width: fit-content;
+  padding: var(--cp_cta-padding-tb) var(--cp_cta-padding-lr);
+  background-color: var(--nv-green);
+  color: var(--nv-0);
+  font-weight: 700;
+  font-size: var(--nv-cta-font-size);
+  line-height: 1.25;
+  white-space: nowrap;
+  transition: var(--02transition);
+}
+
+.cp_cta2_wrap {
+  display: block;
+  color: var(--cl_text_heading);
+  font-weight: 700;
+  font-size: var(--cp_cta-fontsize);
+  line-height: 1.25;
+  overflow: hidden;
+
+  &:is(:focus, :hover) {
+    color: var(--cl_text_heading);
+  }
+}
+.cp_cta2_wrap.small {
+  font-size: var(--cp_cta-fontsize-s);
+}
+.cp_cta2_wrap .no-break {
+  white-space: nowrap;
+  padding-right: var(--cp_cta-icon-size);
+  position: relative;
+}
+.cp_cta2_wrap .no-break::after {
+  content: " ";
+  display: block;
+  width: var(--cp_cta-icon-size);
+  height: var(--cp_cta-icon-size);
+  background: url(cp_assets/ic_chevron_green_shape_thick.svg) no-repeat center /
+    cover;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-53%);
+}

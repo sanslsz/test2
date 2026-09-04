@@ -1,0 +1,91 @@
+@media screen and (min-width: 1024px) {
+    :root {
+        --md_listgrid: 1fr 1fr 1fr;
+        --cp_ul-customimage-inline-flexbasis: auto;
+        
+        --cp_dl-spec-maxw: 790px;
+        --cp_dl-spec-columns: 4fr 8fr;
+        --cp_dl-spec-group-columns: 4fr 3fr 5fr;
+        --cp_dl-spec-group-h3-col: 1 / 2;
+        --cp_dl-spec-group-h3-row: span 2;
+        --cp_dl-spec-group-h3-padding: var(--sp_px-l) calc(var(--sp_px-l) * 2) 0 0;
+        --cp_dl-spec-group-h3-borderbtm: unset;
+        --cp_dl-spec-group-dt-col: 2 / 3;
+        --cp_dl-spec-group-dd-col: 3 / 4;
+
+    }
+}
+
+@media screen and (min-width: 1350px) {
+    :root {
+
+        /*       --md_listgrid: 1fr 1fr 1fr 1fr;*/
+        
+        --cp_dl-spec-maxw: 1069px;
+
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    :root {}
+}
+
+@media (prefers-color-scheme: dark) {
+
+    :root {}
+}
+
+/*================= general list style ========================*/
+
+.cp_ul-greater, 
+.cp_ol-decimal, 
+.cp_dl-spec, 
+.cp_ul-customimage,
+.cp_ol-counter,
+.cp_ol-counters,
+.cp_ul-multi {
+    line-height: 1.4;
+}
+
+.cp_ol-date, 
+.cp_dl-glossary {
+    line-height: 1.667;
+}
+
+
+:is(.cp_ul-greater, .cp_ol-decimal, .cp_ol-counter) li + li {
+    margin-top: var(--sp_em-s);
+}
+
+:is(.cp_ul-greater, .cp_ol-decimal, .cp_ol-counter) :is(.cp_ul-greater, .cp_ol-decimal, .cp_ol-counter) {
+    margin-top:  var(--sp_em-xs);
+    margin-bottom:  var(--sp_em-xs);
+}
+
+:is(.cp_ul-greater, .cp_ol-decimal, .cp_ol-counter) :is(.cp_ul-greater, .cp_ol-decimal, .cp_ol-counter) li + li {
+    margin-top: var(--sp_em-xs);
+}
+
+/*================= components ========================*/
+
+
+.cp_ul-greater {
+    margin: var(--sp_em-l) 0;
+    padding-left: var(--sp_em-xl);
+}
+
+.cp_ul-greater > li {
+    position: relative;
+}
+
+.cp_ul-greater > li::before {
+    content: '\003e';
+    display: block;
+    font-weight: bold;
+    line-height: 1;
+    text-align:center;
+    width: 1em;
+    position: absolute;
+    top: calc(1em * 1.4/2 - 0.5em);
+    left: calc(-1em - var(--sp_em-xs));
+}

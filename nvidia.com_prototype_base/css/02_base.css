@@ -1,0 +1,133 @@
+:root {
+    
+/*    ============= spacing =============*/
+    
+    --sp_px-xs: 4px;
+    --sp_px-s: 8px;
+    --sp_px-m: 12px;
+    --sp_px-l: 16px;
+    --sp_px-xl: 20px;
+    --sp_px-xxl: 24px;
+    --sp_px-xxxl: 28px;
+    --sp_px-xxxxl: 32px;
+
+    --sp_em-xs: 0.3em;
+    --sp_em-s: 0.6em;
+    --sp_em-m: 0.9em;
+    --sp_em-l: 1.2em;
+    --sp_em-xl: 1.5em;
+    --sp_em-xxl: 1.8em;
+    --sp_em-xxxl: 2.1em;
+    --sp_em-xxxxl: 2.4em;
+    
+    
+    --padding-tb: 32px;
+    --padding-lr: 10px;
+    --padding-section: var(--padding-tb) var(--padding-lr);
+    --bleed: var(--padding-lr);
+    
+    
+    /*    ============= sizing =============*/
+    
+    --sz_icon-s: 16px;
+    --sz_icon-m: 24px;
+    --sz_icon-l: 32px;
+    
+
+
+}
+
+@media screen and (min-width: 640px) {
+    :root {
+        
+    --sp_px-xs: 5px;
+    --sp_px-s: 9px;
+    --sp_px-m: 13px;
+    --sp_px-l: 17px;
+    --sp_px-xl: 22px;
+    --sp_px-xxl: 27px;
+    --sp_px-xxxl: 32px;
+    --sp_px-xxxxl: 38px;
+    
+    --padding-tb: 48px;
+
+    --wrapper: 630px;
+    --bleed: calc((100vw - var(--wrapper))/2);
+        
+
+}
+}
+
+@media screen and (min-width: 1024px) {
+    :root { 
+    --sp_px-xs: 6px;
+    --sp_px-s: 10px;
+    --sp_px-m: 14px;
+    --sp_px-l: 18px;
+    --sp_px-xl: 24px;
+    --sp_px-xxl: 30px;
+    --sp_px-xxxl: 36px;
+    --sp_px-xxxxl: 44px; 
+        
+    --padding-tb: 64px;
+    --wrapper: 954px;
+        
+}
+}
+
+@media screen and (min-width: 1350px) {
+    :root {
+    --sp_px-xs: 7px;
+    --sp_px-s: 11px;
+    --sp_px-m: 15px;
+    --sp_px-l: 19px;
+    --sp_px-xl: 26px;
+    --sp_px-xxl: 33px;    
+    --sp_px-xxxl: 40px;
+    --sp_px-xxxxl: 50px;
+        
+    --padding-tb: 96px;
+    --wrapper: 1290px;
+}
+}
+
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/*==========  generic settings  ==========*/
+html {
+    padding: 0;
+    scroll-behavior: smooth;
+}
+ul, ol, dl, li, dt, dd {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+figure {
+    padding: 0;
+    margin: 0;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ============== wrapper & padding================*/
+
+.padding {
+    padding: var(--padding-section);
+}
+.paddingsmall {
+    padding: var(--sp_px-s) var(--padding-lr);
+}
+.wrapper {
+    max-width: var(--wrapper);
+    margin-left: auto;
+    margin-right: auto;
+}
